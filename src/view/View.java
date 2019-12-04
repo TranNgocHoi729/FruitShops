@@ -28,11 +28,13 @@ public class View {
                     perform.addFruit();
                     break;
                 case 2:
-                    perform.shopping();
+                    perform.readOrders();
                     break;
                 case 3:
+                    perform.shopping();
                     break;
                 case 4:
+                    
                     return;
             }
         }

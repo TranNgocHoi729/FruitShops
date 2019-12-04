@@ -57,8 +57,9 @@ public class Validate {
         }
     }
 
-    private boolean checkNameExist(ArrayList<Fruit> lis, String name) {
-       if (lis.isEmpty()) {
+    // This function will be return False if ArrayList contain Fruit name, else return true. 
+    public boolean checkNameExist(ArrayList<Fruit> lis, String name) {
+        if (lis.isEmpty()) {
             return true;
         } else {
             for (Fruit li : lis) {
@@ -107,5 +108,29 @@ public class Validate {
             System.out.println("Please re-Enter : ");
         }
 
+    }
+
+    public String getValidateString() {
+        while (true) {
+            String s = sc.nextLine();
+            if (s.isEmpty()) {
+                System.out.println("Can not enter Nothing !!");
+                System.out.println("Re-Enter : ");
+            } else {
+                return s;
+            }
+        }
+    }
+
+    public String yesNo() {
+        while (true) {
+            System.out.println("Do you want to continue Y/N ? ");
+            String key = sc.nextLine();
+            if ((key.length() == 1) && (key.charAt(0) == 'N' || key.charAt(0) == 'n' || key.charAt(0) == 'y' || key.charAt(0) == 'Y')) {
+                return key;
+            } else {
+                System.out.println("Wrong input !! Input just contain Y/N !");
+            }
+        }
     }
 }
